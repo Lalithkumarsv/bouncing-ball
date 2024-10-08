@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Balls</title>
+
+</head>
+<body>
+  <div id="ball-container"></div>
+  <script>
+window.onload = () => {
+    var Xpos=[]
+    var Ypos=[]
+        function create() {
+                var div = document.createElement('div')
+                let color = randomColor()
+                let x = randomx()
+                Xpos.push(x)
+                let y = randomy()
+                Ypos.push(y)
+                div.style.zIndex = '1';
+                div.style.position = 'absolute';
+                div.style.left = x + 'px';
+                div.style.top = y + 'px';
+                div.style.height = '100px';
+                div.style.width = '100px';
+                div.style.background = color;
+                div.style.borderRadius = '50px';
+                document.body.appendChild(div)
+                return div
+
+            }
+
+            function randomColor() {
+                let palet = [ "black","green"]
+                let color = palet[Math.floor(Math.random() * 2)]
+                return color
+            }
+
+            function randomx() {
+                let x = Math.random() * 600
+                return x;
+            }
+
+            function randomy() {
+                let y = Math.random() * 600
+                return y;
+            }
+            var balls=[]
+            for (let i = 0; i < 4; i++) {
+                balls.push(create())
+                console.log(balls[0])
+}
+let Vel=10
+function move()
+{
+    Xpos[0]=Xpos[0]+Vel
+    balls[0].style.left=Xpos[0]+'px'
+    Ypos[0]=Ypos[0]+Vel
+    balls[0].style.top=Ypos[0]+'px'
+
+}
+setInterval(move,1000)
+}
+  </script>
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+  <title> Balls</title>
+
+</head>
+<body>
+  <div id="ball-container"></div>
+  <script>
+window.onload = () => {
+    var Xpos=[]
+    var Ypos=[]
+        function create() {
+                var div = document.createElement('div')
+                let color = randomColor()
+                let x = randomx()
+                Xpos.push(x)
+                let y = randomy()
+                Ypos.push(y)
+                div.style.zIndex = '1';
+                div.style.position = 'absolute';
+                div.style.left = x + 'px';
+                div.style.top = y + 'px';
+                div.style.height = '100px';
+                div.style.width = '100px';
+                div.style.background = color;
+                div.style.borderRadius = '50px';
+                document.body.appendChild(div)
+                return div
+
+            }
+
+            function randomColor() {
+                let palet = [ "black","green"]
+                let color = palet[Math.floor(Math.random() * 2)]
+                return color
+            }
+
+            function randomx() {
+                let x = Math.random() * 600
+                return x;
+            }
+
+            function randomy() {
+                let y = Math.random() * 600
+                return y;
+            }
+            var balls=[]
+            for (let i = 0; i < 4; i++) {
+                balls.push(create())
+                console.log(balls[0])
+}
+let Vel=10
+function move()
+{
+    Xpos[0]=Xpos[0]+Vel
+    balls[0].style.left=Xpos[0]+'px'
+    Ypos[0]=Ypos[0]+Vel
+    balls[0].style.top=Ypos[0]+'px'
+
+}
+setInterval(move,1000)
+}
+  </script>
+</body>
+</html>
